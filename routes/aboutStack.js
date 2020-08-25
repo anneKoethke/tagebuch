@@ -3,14 +3,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import About from '../screens/about';
 import Header from '../shared/header';
-import { Image } from 'react-native';
 
 const { Navigator, Screen } = createStackNavigator();
 
 const AboutStack = () => (
     <Navigator 
       screenOptions={{
-        headerTintColor: 'red',
+        headerStyle: {
+          backgroundColor: '#000',
+        },
+        headerTintColor: '#fff', // color of Title and Button
       }}>
       <Screen 
         name="About" 
@@ -23,8 +25,7 @@ const AboutStack = () => (
             }
           }
         }
-      />
-      
+      />  
     </Navigator>
 );
 
