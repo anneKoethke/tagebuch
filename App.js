@@ -3,10 +3,13 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo'; 
+import Home from './screens/home';
+import About from './screens/about';
 
 const getFonts = () => Font.loadAsync({
   'permanent-marker': require('./assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf'),
-  'kalam-light': require('./assets/fonts/Kalam/Kalam-Light.ttf')
+  'kalam-light': require('./assets/fonts/Kalam/Kalam-Light.ttf'),
+  'kalam-regular': require('./assets/fonts/Kalam/Kalam-Regular.ttf')
 });
 
 export default function App() {
@@ -15,10 +18,7 @@ export default function App() {
   
   if(fontsLoaded) {
     return (
-      <View >
-        <Text>Tagebuch</Text>
-        <StatusBar style="auto" />
-      </View>
+      <Home />
     );
   } else {
     return (

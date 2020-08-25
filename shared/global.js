@@ -5,13 +5,21 @@ export const globalStyles = StyleSheet.create({
     padding: 20,
     flex: 1
   },
+  screenHeaderText: {
+    fontFamily: 'permanent-marker',
+    fontSize: 30,
+    color: '#000'
+  },
   titleText: {
-    //fontFamily: 'nunito-bold',
-    fontSize: 18,
+    fontFamily: 'permanent-marker',
+    fontSize: 20,
     color: '#333'
   },
   paragraph: {
+    fontFamily: 'kalam-light',
+    //fontFamily: 'kalam-regular',
     marginVertical: 8,
-    lineHeight: 20
+    fontSize: 18,
+    lineHeight: 25
   },
 });
