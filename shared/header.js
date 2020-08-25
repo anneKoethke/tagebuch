@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 //Icons 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 // <MaterialCommunityIcons name="content-save" size={24} color="black" />
@@ -7,13 +7,18 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 // <MaterialCommunityIcons name="typewriter" size={24} color="black" />
 // <MaterialCommunityIcons name="format-list-bulleted-type" size={24} color="black" />
 
-export default function Header () {
+export default function Header ({ navigation, title }) {
+
+  const openMenu = () => {
+    navigation.openDrawer()
+  }
+
   return(
     <View style={styles.header}>
-      <MaterialCommunityIcons name="format-list-bulleted-type" size={24} color="black" />
+      <MaterialCommunityIcons name="format-list-bulleted-type" size={24} onPress={openMenu} style={styles.icon} />
       <View style={styles.headerTitle}>
-        <MaterialCommunityIcons name="typewriter" size={24} color="black" />
-        <Text style={styles.headerText}>Tagebuch App</Text>
+        <MaterialCommunityIcons name="typewriter" size={24} />
+        <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
   );
@@ -40,10 +45,5 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 10,
     color: '#333'
-  },
-  headerImage: {
-    width: 26,
-    height: 26,
-    marginHorizontal: 10
   }
 });

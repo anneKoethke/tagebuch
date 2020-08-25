@@ -25,11 +25,11 @@ export const globalStyles = StyleSheet.create({
 });
 
 export const images = {
-  ratings: {
-    'angry': require('../assets/moods/angry.png'),
-    'sad': require('../assets/moods/sad.png'),
-    'neutral': require('../assets/moods/neutral.png'),
-    'happy': require('../assets/moods/happy.png'),
-    'over_the_top': require('../assets/moods/over_the_top.png')
+  moods: {
+    '1': require('../assets/moods/angry.png'),
+    '2': require('../assets/moods/sad.png'),
+    '3': require('../assets/moods/neutral.png'),
+    '4': require('../assets/moods/happy.png'),
+    '5': require('../assets/moods/over_the_top.png')
   }
 };

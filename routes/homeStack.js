@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/home';
-import ReviewDetails from '../screens/reviewDetails';
+import EntryDetails from '../screens/entryDetails';
 import Header from '../shared/header';
 
 const { Navigator, Screen } = createStackNavigator();
@@ -20,9 +20,9 @@ const HomeStack = () => (
         }
       />
       <Screen 
-        name="ReviewDetails" 
-        component={ReviewDetails} 
-        options={{ title: 'Review Details' }} 
+        name="EntryDetails" 
+        component={EntryDetails} 
+        options={{ title: 'Entry Details' }} 
       /> 
     </Navigator>
 );
