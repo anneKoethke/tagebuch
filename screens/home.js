@@ -8,9 +8,10 @@ import moment from 'moment';
 export default function Home({ navigation }) {
 
   const [entries, setEntries] = useState([
-    {title: "Today was boring", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci optio sed numquam corrupti natus odit, earum repellat dicta consectetur rem maxime odio suscipit, id voluptatibus. Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "2", key: "2020-08-22T11:05:33.808Z"}, 
-    {title: "Still boring as f...", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab non ad qui, ullam fuga? Tenetur harum assumenda numquam doloremque!", mood: "1", key: "2020-08-23T11:05:33.808Z"},
-    {title: "got slightly better", content: "Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "3", key: "2020-08-24T11:05:33.808Z"}, 
+    {title: "Today was boring", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci optio sed numquam corrupti natus odit, earum repellat dicta consectetur rem maxime odio suscipit, id voluptatibus. Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "2", key: "2020-08-22T15:50:33.808Z"}, 
+    {title: "Still boring as fuuuuu...", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab non ad qui, ullam fuga? Tenetur harum assumenda numquam doloremque!", mood: "1", key: "2020-08-23T17:05:33.808Z"},
+    {title: "got slightly better", content: "Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "3", key: "2020-08-24T09:05:33.808Z"}, 
+    {title: "happy at last", content: "Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "4", key: "2020-08-25T09:05:33.808Z"},
     {title: "Now I feel so much better I could fly away with all the happiness", content: "Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "5", key: "2020-08-25T11:05:33.808Z"}
   ])
 
@@ -21,6 +22,8 @@ export default function Home({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
+      {/* hier fehlt das Modal mit der Eingabemaske */}
+
       <FlatList 
         data={entries}
         renderItem={({ item }) => (
@@ -30,9 +33,9 @@ export default function Home({ navigation }) {
                 <Image 
                   source={ images.moods[item.mood] } 
                   style={styles.cardImage}
+                  
                 />
                 <View>
-                  <Text style={globalStyles.titleText}>{ /*moment(item.time.toDate()).fromNow()*/ moment(item.key).format("DD.MM.YYYY HH:MM") }</Text>
                   <Text style={globalStyles.titleText}>{ moment(item.key).fromNow() }</Text>
                   <Text style={globalStyles.paragraph}>{ item.title }</Text>
                 </View>
@@ -51,6 +54,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   cardImage: {
-    margin: 5
+    width: 70,
+    height: 70
   }
 });
