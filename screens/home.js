@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, FlatList, TouchableOpacity, Modal, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { globalStyles } from '../styles/global';
 import Header from '../shared/header';
+import Card from '../shared/card';
 
-export default function Home() {
+export default function Home({ navigation }) {
 
   const [entries, setEntries] = useState([
     {title: "Today was boring", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci optio sed numquam corrupti natus odit, earum repellat dicta consectetur rem maxime odio suscipit, id voluptatibus. Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "2", key: "1598345947014"}, 
@@ -13,12 +14,16 @@ export default function Home() {
 
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.titleText}>Montag</Text>
-      <Text style={globalStyles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci optio sed numquam corrupti natus odit, earum repellat dicta consectetur rem maxime odio suscipit, id voluptatibus. Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.</Text>
-      <Text style={globalStyles.titleText}>Dienstag</Text>
-      <Text style={globalStyles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab non ad qui, ullam fuga? Tenetur harum assumenda numquam doloremque!</Text>
-      <Text style={globalStyles.titleText}>Mittwoch</Text>
-      <Text style={globalStyles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab non ad qui, ullam fuga? Tenetur harum assumenda numquam doloremque!</Text>
+      <FlatList 
+        data={entries}
+        renderItem={({ item }) => (
+          <TouchableOpacity onPress={() => navigation.navigate('EntryDetails', item)}>
+            <Card>
+              <Text style={globalStyles.titleText}>{ item.title }</Text>
+            </Card>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
 } 
