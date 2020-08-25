@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\AK\Documents\FREIZEIT PROGRAMMIEREN\ReactNative\tagebuch\node_modules\@babel\compat-data\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\AK\Documents\FREIZEIT PROGRAMMIEREN\ReactNative\tagebuch\node_modules\@babel\generator\node_modules\.bin'
 
 npm manifest: 
   {
@@ -34,6 +34,7 @@ npm manifest:
       "expo": "~38.0.8",
       "expo-font": "^8.2.2",
       "expo-status-bar": "^1.0.2",
+      "moment": "^2.27.0",
       "react": "~16.11.0",
       "react-dom": "~16.11.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
