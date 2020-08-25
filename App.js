@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
-import { AppLoading } from 'expo'; 
-import Home from './screens/home';
-import About from './screens/about';
+import { AppLoading } from 'expo';
+import { View } from 'react-native';
+import { AppNavigator } from './routes/AppNavigator';
 
 const getFonts = () => Font.loadAsync({
   'permanent-marker': require('./assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf'),
@@ -14,12 +13,12 @@ const getFonts = () => Font.loadAsync({
 
 export default function App() {
 
+  // Font can be used in the StyleSheet of each component / screen
   const [fontsLoaded, setFontsLoaded] = useState(false);
-  
+
+  // tracking if Fonts are ready loaded: AppLoading for async loading the fonts
   if(fontsLoaded) {
-    return (
-      <Home />
-    );
+    return <AppNavigator />;
   } else {
     return (
       <AppLoading 
@@ -28,5 +27,4 @@ export default function App() {
       />
     );
   }
-  
 }
