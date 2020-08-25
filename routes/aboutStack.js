@@ -10,14 +10,12 @@ const AboutStack = () => (
     <Navigator 
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#000',
-        },
-        headerTintColor: '#fff', // color of Title and Button
+          backgroundColor: 'black'
+        }
       }}>
       <Screen 
         name="About" 
         component={About}
-        //options={{ headerTitle: props => <Header {...props} /> }} 
         options={
           ({ navigation }) => {
             return {

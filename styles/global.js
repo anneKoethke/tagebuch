@@ -8,7 +8,7 @@ export const globalStyles = StyleSheet.create({
   screenHeaderText: {
     fontFamily: 'permanent-marker',
     fontSize: 30,
-    color: '#000'
+    color: '#333'
   },
   titleText: {
     fontFamily: 'permanent-marker',
@@ -17,7 +17,6 @@ export const globalStyles = StyleSheet.create({
   },
   paragraph: {
     fontFamily: 'kalam-light',
-    //fontFamily: 'kalam-regular',
     marginVertical: 8,
     fontSize: 18,
     lineHeight: 25

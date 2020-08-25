@@ -15,9 +15,17 @@ export default function Header ({ navigation, title }) {
 
   return(
     <View style={styles.header}>
-      <MaterialCommunityIcons name="format-list-bulleted-type" size={24} onPress={openMenu} style={styles.icon} />
+      <MaterialCommunityIcons 
+        name="format-list-bulleted-type" 
+        size={24} 
+        onPress={openMenu} 
+        style={styles.menuIcon} />
       <View style={styles.headerTitle}>
-        <MaterialCommunityIcons name="typewriter" size={24} />
+        <MaterialCommunityIcons 
+          name="typewriter" 
+          size={24} 
+          color="#fff" 
+        />
         <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
@@ -38,12 +46,12 @@ const styles = StyleSheet.create({
   headerText: {
     fontWeight: 'bold',
     fontSize: 20,
-    color: '#333',
+    color: '#fff',
     letterSpacing: 1
   },
-  icon: {
+  menuIcon: {
     position: 'absolute',
     left: 10,
-    color: '#333'
+    color: '#fff'
   }
 });

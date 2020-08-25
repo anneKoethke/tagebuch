@@ -8,7 +8,13 @@ import Header from '../shared/header';
 const { Navigator, Screen } = createStackNavigator();
 
 const HomeStack = () => (
-    <Navigator>
+    <Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'black'
+        }
+      }}
+    >
       <Screen 
         name="Home" 
         component={Home}
