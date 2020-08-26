@@ -4,9 +4,11 @@ import { globalStyles, images } from '../styles/global';
 import Header from '../shared/header';
 import Card from '../shared/card';
 import moment from 'moment';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Home({ navigation }) {
 
+  const [modalOpen, setModalOpen] = useState(false);
   const [entries, setEntries] = useState([
     {title: "Today was boring", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat adipisci optio sed numquam corrupti natus odit, earum repellat dicta consectetur rem maxime odio suscipit, id voluptatibus. Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "2", key: "2020-08-22T15:50:33.808Z"}, 
     {title: "Still boring as fuuuuu...", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ab non ad qui, ullam fuga? Tenetur harum assumenda numquam doloremque!", mood: "1", key: "2020-08-23T17:05:33.808Z"},
@@ -22,6 +24,25 @@ export default function Home({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
+      <Modal visible={modalOpen} animationType='slide'>
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+          <View style={styles.modalContent}>
+            <MaterialCommunityIcons 
+              name="close" 
+              size={24} 
+              style={{...styles.modalToggle, ...styles.modalClose}} 
+              onPress={() => setModalOpen(false)} 
+            />
+          </View>
+        </TouchableWithoutFeedback>
+      </Modal>
+
+      <MaterialCommunityIcons 
+        name="playlist-edit" 
+        size={24} 
+        style={styles.modalToggle}
+        onPress={() => setModalOpen(true)}
+      />
       {/* hier fehlt das Modal mit der Eingabemaske */}
 
       <FlatList 
@@ -33,7 +54,6 @@ export default function Home({ navigation }) {
                 <Image 
                   source={ images.moods[item.mood] } 
                   style={styles.cardImage}
-                  
                 />
                 <View>
                   <Text style={globalStyles.titleText}>{ moment(item.key).fromNow() }</Text>
@@ -49,6 +69,22 @@ export default function Home({ navigation }) {
 } 
 
 const styles = StyleSheet.create({
+  modalContent: {
+    flex: 1,
+  },
+  modalToggle: {
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#d3d3d3',
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 10,
+    alignSelf: 'center'
+  },
+  modalClose: {
+    marginTop: 20,
+    marginBottom: 0
+  },
   homeCard: {
     flexDirection: 'row',
     alignItems: 'center'
