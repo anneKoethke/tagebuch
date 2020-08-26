@@ -54,7 +54,7 @@ export default function EntryForm({ addEntry }) {
               onBlur={props.handleBlur('content')}
             />
             <Text style={globalStyles.errorText}>{ props.touched.content && props.errors.content }</Text>
-
+            {/* TODO: fix mood input and schema accordingly*/}
             <TextInput 
               style={globalStyles.input}
               placeholder='Mood (1 - 5)'
