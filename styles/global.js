@@ -13,6 +13,9 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'permanent-marker',
     fontSize: 20
   },
+  first: {
+    marginTop: 20
+  },
   paragraph: {
     fontFamily: 'kalam-light',
     marginVertical: 8,
