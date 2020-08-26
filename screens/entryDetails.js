@@ -12,7 +12,7 @@ export default function EntryDetails({ route, navigation }) {
   return(
     <View style={globalStyles.container}>
       <Card>
-        <Text style={globalStyles.paragraph}>{moment(key).format("DD.MM.YYYY HH:MM")}</Text>
+        <Text style={globalStyles.paragraph}>{moment.unix(key).format("DD.MM.YYYY HH:MM")}</Text>
         <Text style={globalStyles.titleText}>{title}</Text>      
         <Text style={globalStyles.paragraph}>{content}</Text>
         <View style={styles.mood}>

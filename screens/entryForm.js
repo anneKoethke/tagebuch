@@ -29,7 +29,7 @@ export default function EntryForm({ addEntry }) {
         onSubmit={(values, actions) => {
           actions.resetForm();
           addEntry(values);
-          console.log(values);
+          //console.log(values);
         }}
       >
         {props => (
