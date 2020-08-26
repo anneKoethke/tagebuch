@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\Users\AK\Documents\FREIZEIT PROGRAMMIEREN\ReactNative\tagebuch\node_modules\@babel\generator\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\Users\AK\Documents\FREIZEIT PROGRAMMIEREN\ReactNative\tagebuch\node_modules\@babel\helper-compilation-targets\node_modules\.bin'
 
 npm manifest: 
   {
@@ -34,6 +34,7 @@ npm manifest:
       "expo": "~38.0.8",
       "expo-font": "^8.2.2",
       "expo-status-bar": "^1.0.2",
+      "formik": "^2.1.5",
       "moment": "^2.27.0",
       "react": "~16.11.0",
       "react-dom": "~16.11.0",
@@ -42,7 +43,8 @@ npm manifest:
       "react-native-reanimated": "~1.9.0",
       "react-native-safe-area-context": "~3.0.7",
       "react-native-screens": "~2.9.0",
-      "react-native-web": "~0.11.7"
+      "react-native-web": "~0.11.7",
+      "yup": "^0.29.3"
     },
     "devDependencies": {
       "@babel/core": "^7.8.6",

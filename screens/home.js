@@ -5,6 +5,7 @@ import Header from '../shared/header';
 import Card from '../shared/card';
 import moment from 'moment';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import EntryForm from './entryForm';
 
 export default function Home({ navigation }) {
 
@@ -16,6 +17,14 @@ export default function Home({ navigation }) {
     {title: "happy at last", content: "Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "4", key: "2020-08-25T09:05:33.808Z"},
     {title: "Now I feel so much better I could fly away with all the happiness", content: "Similique nemo sapiente aperiam, vel ad magni, eaque porro odit sit doloremque totam sed eligendi tempore placeat, repellendus officiis facilis quis explicabo vitae recusandae.", mood: "5", key: "2020-08-25T11:05:33.808Z"}
   ])
+  const addEntry = (entry) => {
+    // time trouble :(
+    entry.key = moment();
+    setEntries((currEntries) => {
+      return [ entry, ...currEntries]
+    });
+    setModalOpen(false);
+  }
 
   /*
     failled to compile bla:
@@ -33,6 +42,7 @@ export default function Home({ navigation }) {
               style={{...styles.modalToggle, ...styles.modalClose}} 
               onPress={() => setModalOpen(false)} 
             />
+            <EntryForm addEntry={addEntry} />
           </View>
         </TouchableWithoutFeedback>
       </Modal>
