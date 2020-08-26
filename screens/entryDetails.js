@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import { globalStyles, images } from '../styles/global';
 import Card from '../shared/card';
 import moment from 'moment';
@@ -11,15 +11,17 @@ export default function EntryDetails({ route, navigation }) {
 
   return(
     <View style={globalStyles.container}>
-      <Card>
-        <Text style={globalStyles.paragraph}>{moment.unix(key).format("DD.MM.YYYY HH:MM")}</Text>
-        <Text style={globalStyles.titleText}>{title}</Text>      
-        <Text style={globalStyles.paragraph}>{content}</Text>
-        <View style={styles.mood}>
-          <Text style={globalStyles.paragraph}>Today's mood: </Text>
-          <Image source={ images.moods[mood] } />
-        </View>
-      </Card>
+      <ScrollView>
+        <Card>
+          <Text style={globalStyles.paragraph}>{moment.unix(key).format("DD.MM.YYYY HH:MM")}</Text>
+          <Text style={globalStyles.titleText}>{title}</Text>      
+          <Text style={globalStyles.paragraph}>{content}</Text>
+          <View style={styles.mood}>
+            <Text style={globalStyles.paragraph}>Today's mood: </Text>
+            <Image source={ images.moods[mood] } />
+          </View>
+        </Card>
+      </ScrollView>
     </View>
   )
 }

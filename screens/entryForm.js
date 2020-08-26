@@ -47,6 +47,7 @@ export default function EntryForm({ addEntry }) {
               style={globalStyles.input}
               multiline 
               minHeight={60}
+              maxHeight={250}
               placeholder='Entry Content'
               onChangeText={props.handleChange('content')}
               value={props.values.content}

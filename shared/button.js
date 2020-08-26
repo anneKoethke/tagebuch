@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 14,
     paddingHorizontal: 10,
-    backgroundColor: '#A3CB38'
+    backgroundColor: '#A3CB38' // light green: 'android green' from https://flatuicolors.com/palette/nl
   },
   buttonText: {
     color: '#fff',
