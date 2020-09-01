@@ -9,11 +9,12 @@ export default function EntryDetails({ route, navigation }) {
   
   const { title, mood, content, key } = route.params;
   // TODO: edit EntryDetails 
+
   return(
     <View style={globalStyles.container}>
       <ScrollView>
         <Card>
-          <Text style={globalStyles.paragraph}>{moment.unix(key).format("DD.MM.YYYY HH:MM")}</Text>
+          <Text style={globalStyles.paragraph}>{moment.unix(key).format("LLL")}</Text>
           <Text style={globalStyles.titleText}>{title}</Text>      
           <Text style={[globalStyles.first, globalStyles.paragraph]}>{content}</Text>
           <View style={styles.mood}>
