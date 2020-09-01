@@ -69,8 +69,7 @@ export default function EntryForm({ addEntry }) {
               <Text style={styles.chosenMood}> {showMood}</Text>
             </Text>
 
-            <View style={styles.moodImageContainer}>
-              {/* TODO: moodView (...) as card? FlatList? */}
+            <View style={styles.moodImageContainer}>              
               <View style={styles.moodView}>
                 <TouchableOpacity 
                   style={[ styles.imageStyle ]}
