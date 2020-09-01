@@ -8,7 +8,8 @@ import { AppNavigator } from './routes/AppNavigator';
 const getFonts = () => Font.loadAsync({
   'permanent-marker': require('./assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf'),
   'kalam-light': require('./assets/fonts/Kalam/Kalam-Light.ttf'),
-  'kalam-regular': require('./assets/fonts/Kalam/Kalam-Regular.ttf')
+  'kalam-regular': require('./assets/fonts/Kalam/Kalam-Regular.ttf'),
+  'kalam-bold': require('./assets/fonts/Kalam/Kalam-Bold.ttf')
 });
 
 export default function App() {
