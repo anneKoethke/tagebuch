@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Linking } from 'react-native';
 import { globalStyles } from '../styles/global';
