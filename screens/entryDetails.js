@@ -8,7 +8,6 @@ import moment from 'moment';
 export default function EntryDetails({ route, navigation }) {
   
   const { title, mood, content, key } = route.params;
-  // TODO: edit EntryDetails 
 
   return(
     <View style={globalStyles.container}>
