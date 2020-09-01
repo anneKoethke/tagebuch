@@ -12,7 +12,6 @@ const entrySchema = yup.object({
   content: yup.string()
     .required()
     .min(8),
-  // TODO: mood input und Regel
   mood: yup.string()
     .required()
     .test('mood-selected', 'Mood must be selected', (val) => {
@@ -22,7 +21,14 @@ const entrySchema = yup.object({
 
 export default function EntryForm({ addEntry }) {
 
-  //const [selectedValue, setSelectedValue] = useState('3');
+  const [currentMood, setCurrentMood] = useState([
+    {name: 'angry',     key: '1'},
+    {name: 'sad',       key: '2'},
+    {name: 'neutral',   key: '3'},
+    {name: 'happy',     key: '4'},
+    {name: 'overjoyed', key: '5'}
+  ]);
+  const [showMood, setShowMood] = useState('(your mood)');
 
   return(
     <View style={globalStyles.container}>
@@ -37,10 +43,10 @@ export default function EntryForm({ addEntry }) {
       >
         {props => (
           <ScrollView>
-            <Text style={styles.innerHeading}>Choose your Title and Content</Text>
+            <Text style={styles.innerHeading}>Choose your title and content</Text>
             <TextInput
               style={globalStyles.input}
-              placeholder='Entry Title'
+              placeholder='entry title'
               onChangeText={props.handleChange('title')}
               value={props.values.title}
               onBlur={props.handleBlur('title')} // yup: error shown, when put of focus
@@ -52,67 +58,58 @@ export default function EntryForm({ addEntry }) {
               multiline 
               minHeight={60}
               maxHeight={250}
-              placeholder='Entry Content'
+              placeholder='entry content'
               onChangeText={props.handleChange('content')}
               value={props.values.content}
               onBlur={props.handleBlur('content')}
             />
             <Text style={globalStyles.errorText}>{ props.touched.content && props.errors.content }</Text>
-            
-            {/* <TextInput 
-              style={globalStyles.input}
-              placeholder='Mood (1 - 5)'
-              onChangeText={props.handleChange('mood')}
-              value={props.values.mood}
-              keyboardType='numeric'
-              onBlur={props.handleBlur('mood')} 
-            />
-            <Text style={globalStyles.errorText}>{ props.touched.mood && props.errors.mood }</Text>*/}
-            
-            {/* TODO: images with text to select */}
 
-            <Text style={styles.innerHeading}>Choose your mood:</Text>
+            <Text style={styles.innerHeading}>Choose your mood: 
+              <Text style={styles.chosenMood}> {showMood}</Text>
+            </Text>
 
             <View style={styles.moodImageContainer}>
+              {/* TODO: moodView (...) as card? FlatList? */}
               <View style={styles.moodView}>
                 <TouchableOpacity 
                   style={[ styles.imageStyle ]}
-                  onPress={() => { props.values.mood= '1'; props.handleChange('mood') }}>
+                  onPress={() => { props.values.mood=currentMood[0].key; props.handleChange('mood'); setShowMood(currentMood[0].name) }}>
                   <Image source={images.moods[1]} />
                 </TouchableOpacity>
-                <Text style={globalStyles.paragraph}>angry</Text>
+                <Text style={globalStyles.paragraph}>{currentMood[0].name}</Text>
               </View>
               <View style={styles.moodView}>
                 <TouchableOpacity 
                   style={[ styles.imageStyle ]}
-                  onPress={() => { props.values.mood= '2'; props.handleChange('mood') }}>
+                  onPress={() => { props.values.mood=currentMood[1].key; props.handleChange('mood'); setShowMood(currentMood[1].name) }}>
                   <Image source={images.moods[2]} />
                 </TouchableOpacity>
-                <Text style={globalStyles.paragraph}>sad</Text>
+                <Text style={globalStyles.paragraph}>{currentMood[1].name}</Text>
               </View>
               <View style={styles.moodView}>
                 <TouchableOpacity 
                   style={[ styles.imageStyle ]}
-                  onPress={() => { props.values.mood= '3'; props.handleChange('mood') }}>
+                  onPress={() => { props.values.mood=currentMood[2].key; props.handleChange('mood'); setShowMood(currentMood[2].name) }}>
                   <Image source={images.moods[3]} />
                 </TouchableOpacity>
-                <Text style={globalStyles.paragraph}>neutral</Text>
+                <Text style={globalStyles.paragraph}>{currentMood[2].name}</Text>
               </View>
               <View style={styles.moodView}>
               <TouchableOpacity 
                   style={[ styles.imageStyle ]}
-                  onPress={() => { props.values.mood= '4'; props.handleChange('mood') }}>
+                  onPress={() => { props.values.mood=currentMood[3].key; props.handleChange('mood'); setShowMood(currentMood[3].name) }}>
                 <Image source={images.moods[4]} />
               </TouchableOpacity>
-                <Text style={globalStyles.paragraph}>happy</Text>
+                <Text style={globalStyles.paragraph}>{currentMood[3].name}</Text>
               </View>
               <View style={styles.moodView}>
                 <TouchableOpacity 
                   style={[ styles.imageStyle ]}
-                  onPress={() => { props.values.mood= '5'; props.handleChange('mood') }}>
+                  onPress={() => { props.values.mood=currentMood[4].key; props.handleChange('mood'); setShowMood(currentMood[4].name) }}>
                   <Image source={images.moods[5]} />
                 </TouchableOpacity>
-                <Text style={globalStyles.paragraph}>overjoyed</Text>
+                <Text style={globalStyles.paragraph}>{currentMood[4].name}</Text>
               </View>
             </View>
             <Text style={globalStyles.errorText}>{ props.touched.mood && props.errors.mood }</Text>
@@ -132,6 +129,9 @@ const styles = StyleSheet.create({
     fontSize: 25,
     lineHeight: 25,
     paddingVertical: 25,
+  },
+  chosenMood: {
+    color: '#A3CB38' // Android green 
   },
   moodImageContainer: {
     flexDirection: 'row',
