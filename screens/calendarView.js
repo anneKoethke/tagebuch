@@ -87,7 +87,7 @@ export default function CalendarView() {
         }}
         markingType={'multi-dot'}
       />
-      <Text style={[globalStyles.first, globalStyles.paragraph]}>See your mood swings on a monthly basis. For more infromaton:</Text>
+      <Text style={[globalStyles.first, globalStyles.paragraph]}>See your mood swings on a monthly basis. For more informaton, click the info button:</Text>
       
       <Modal visible={modalOpen} animationType='slide'>
         <View>
