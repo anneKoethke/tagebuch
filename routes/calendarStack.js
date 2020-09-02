@@ -19,7 +19,7 @@ const CalendarStack = () => (
         options={
           ({ navigation }) => {
             return {
-              headerTitle: () => <Header navigation={navigation} title='TagebuchApp' />
+              headerTitle: () => <Header navigation={navigation} title='Calendar' />
             }
           }
         }

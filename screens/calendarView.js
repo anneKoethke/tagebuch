@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, Modal } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { globalStyles, images } from '../styles/global';
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import { LocaleConfig } from 'react-native-calendars';
+import CalendarInfo from './infoscreens/calendarInfo';
 
 export default function CalendarView() {
 
@@ -16,6 +18,8 @@ export default function CalendarView() {
   };
   LocaleConfig.defaultLocale = 'de';
 
+  // info in Modal
+  const [modalOpen, setModalOpen] = useState(false);
   // for the Dates with moods/entries 
   const [markedDates, setMarkedDates] = useState([
 
@@ -28,10 +32,7 @@ export default function CalendarView() {
   const overjoyed = { key:'overjoyed', color: '#FDA7DF' }; // rose 
 
   return(
-    <ScrollView style={globalStyles.container}>
-      
-      <Text style={globalStyles.titleText}>Calendar:</Text>
-      <Text style={[globalStyles.first, globalStyles.paragraph]}>See your mood swings on a monthly basis. </Text>
+    <View style={globalStyles.container}>
 
       <Calendar 
         style={{ marginTop: 10 }}
@@ -86,18 +87,47 @@ export default function CalendarView() {
         }}
         markingType={'multi-dot'}
       />
+      <Text style={[globalStyles.first, globalStyles.paragraph]}>See your mood swings on a monthly basis. For more infromaton:</Text>
+      
+      <Modal visible={modalOpen} animationType='slide'>
+        <View>
+          <MaterialCommunityIcons 
+            name="close" 
+            size={24} 
+            style={{...styles.modalToggle, ...styles.modalClose}} 
+            onPress={() => setModalOpen(false)} 
+          />
+          <CalendarInfo />
+        </View>
+      </Modal>
 
-      {/* instead of scrollView and a lot of text: (i) info-button with the info (modal?) */}
-      <Text style={[globalStyles.first, globalStyles.paragraph]}>Swipe left or right on the calendar or use the green arrows to change the month. Days, on which you've entered a mood/entry, will be highlighted in green.</Text>
-      <Text style={[globalStyles.paragraph]}>The differently colored little dots specify the mood(s) of that day: <Text style={{color:'#EA2027'}}> angry red</Text>,
-      <Text style={{color:'#0652DD'}}> sad blue</Text>,
-      <Text style={{color:'gray'}}> neutral gray</Text>,
-      <Text style={{color:'#FFC312'}}> happy yellow</Text> and 
-      <Text style={{color:'#FDA7DF'}}> overjoyed rosé</Text>.</Text>
-      <Text style={[globalStyles.paragraph, { marginBottom: 35 }]}>Click on a specific day for more information on the mood(s) and entries of that day. You can only select days that have passed - no future mood prediction in this app...</Text>
+       <MaterialCommunityIcons 
+        name="information-outline" 
+        size={24} 
+        style={styles.modalToggle}
+        onPress={() => setModalOpen(true)}
+      />
 
-    </ScrollView>
+    </View>
 
   );
 }
 
+const styles = StyleSheet.create({
+  modalContent: {
+    flex: 1,
+  },
+  modalToggle: {
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#d3d3d3',
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 10,
+    alignSelf: 'center'
+  },
+  modalClose: {
+    marginTop: 20,
+    marginBottom: 0
+  }
+});
