@@ -1,6 +1,6 @@
 # TagebuchApp with ReactNative + Expo
 
-A simple diary app with react native and expo CLI to track your mood. it's filled with dummy data and will become a pure React Native (without Expo) some time soon..
+A simple diary app (prototype) with react native and expo CLI to track your mood. it's filled with dummy data and will become a pure React Native (without Expo) some time soon..
 
 It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series](https://www.youtube.com/watch?v=ur6I5m2nTvk&list=PL4cUxeGkcC9ixPU-QkScoRBVxtPPzVjrQ&index=1).
 
@@ -34,4 +34,11 @@ Clicking on the edit 'button' (MaterialCommunityIcon) opens up a Modal to fill i
 
 The Routing via AppNavigator has a DrawerNavigation (HomeStack, AboutStack, CalendarStack) with a nested StackNavigation (HomeScreen, EntryDetails).
 
-The CalendarView has an informational Modal and shows (as dummy data) the dates with entries (green circle around the date) and the moods (differently colored dots under the specific date).  
+The CalendarView has an informational Modal and shows (as dummy data) the dates with entries (green circle around the date) and the moods (differently colored dots under the specific date). Currently there is no connection between data in HomeScreen and Data in CalnedarView. Just checking things out here...
+
+
+## History
+
+This is actually a remodelling of the **ThinkNegative App**, a team project at university to learn programming in Android Studio (Java). ;)
+
+...don't we all have a toDo-App in every language learned...
