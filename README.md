@@ -6,8 +6,8 @@ It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series
 
 
 ## getting started
-npm i
-.... (toDo)
+`npm i
+expo start`
 
 
 ## How it looks
@@ -41,4 +41,4 @@ The CalendarView has an informational Modal and shows (as dummy data) the dates 
 
 This is actually a remodelling of the **ThinkNegative App**, a team project at university to learn programming in Android Studio (Java). ;)
 
-...don't we all have a toDo-App in every language learned...
+*...don't we all have a toDo-App in every language learned...*
