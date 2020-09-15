@@ -11,8 +11,8 @@ export const AppNavigator = () => (
   <NavigationContainer>
     <Navigator initialRouteName="HomeStack">
       <Screen name="Home" component={HomeStack} />
-      <Screen name="About" component={AboutStack} />
       <Screen name="Calendar" component={CalendarStack} />
+      <Screen name="About" component={AboutStack} />
     </Navigator>
   </NavigationContainer>
 );
