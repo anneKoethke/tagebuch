@@ -38,6 +38,7 @@ export const globalStyles = StyleSheet.create({
   }
 });
 
+// images for the moods
 export const images = {
   moods: {
     '1': require('../assets/moods/angry.png'),
@@ -47,3 +48,19 @@ export const images = {
     '5': require('../assets/moods/over_the_top.png')
   }
 };
+
+// locale DE for the CalendarView
+export const localeDe = {
+  monthNames: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+  monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'],
+  dayNames: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
+  dayNamesShort: ['So','Mo','Di','Mi','Do','Fr','Sa'],
+  today: 'Heute'
+}; 
+
+// color codes for the mood dots in calendarView
+export const angryColor = { key:'angry', color: '#EA2027' }; // red
+export const sadColor = { key:'sad', color: '#0652DD' }; // blue
+export const neutralColor = { key:'neutral', color: 'gray' }; // gray 
+export const happyColor = { key:'happy', color: '#FFC312' }; // yellow
+export const overjoyedColor = { key:'overjoyed', color: '#FDA7DF' }; // orange 

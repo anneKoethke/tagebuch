@@ -1,35 +1,24 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Modal } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { globalStyles, images } from '../styles/global';
+import { globalStyles, localeDe, angryColor, sadColor, neutralColor, happyColor, overjoyedColor } from '../styles/global';
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import { LocaleConfig } from 'react-native-calendars';
 import CalendarInfo from './infoscreens/calendarInfo';
 
 export default function CalendarView() {
 
-  // change the names to German
-  LocaleConfig.locales['de'] = {
-    monthNames: ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
-    monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'],
-    dayNames: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
-    dayNamesShort: ['So','Mo','Di','Mi','Do','Fr','Sa'],
-    today: 'Heute'
-  };
+  // change the names for moths and days to German
+  LocaleConfig.locales['de'] = localeDe;
   LocaleConfig.defaultLocale = 'de';
 
   // info in Modal
   const [modalOpen, setModalOpen] = useState(false);
-  // for the Dates with moods/entries 
+  
+  // TODO: for the Dates with moods/entries 
   const [markedDates, setMarkedDates] = useState([
 
   ]);
-  // mood dots
-  const angry = { key:'angry', color: '#EA2027'}; //red -> flat ui colors nl
-  const sad = { key:'sad', color: '#0652DD' }; // blue
-  const neutral = { key:'neutral', color: 'gray' }; // 
-  const happy = { key:'happy', color: '#FFC312' }; // yellow
-  const overjoyed = { key:'overjoyed', color: '#FDA7DF' }; // rose 
 
   return(
     <View style={globalStyles.container}>
@@ -78,12 +67,13 @@ export default function CalendarView() {
         // selected must be true, to show selectedColor = color around the number
         // TODO: combine the entries' dates and moods to this markedDates object
         markedDates={{
-          '2020-08-13': { dots: [happy], selected: true, selectedColor: '#A3CB38'  },
-          '2020-08-18': { dots: [sad, neutral], selected: true, selectedColor: '#A3CB38' },
-          '2020-08-22': { dots: [angry, overjoyed], selected: true, selectedColor: '#A3CB38' },
-          '2020-08-27': { dots: [angry, sad, neutral], selected: true, selectedColor: '#A3CB38' },
-          '2020-08-28': { dots: [happy, overjoyed], selected: true, selectedColor: '#A3CB38' },
-          '2020-09-01': { dots: [happy, overjoyed], selected: true, selectedColor: '#A3CB38' }
+          '2020-08-13': { dots: [happyColor], selected: true, selectedColor: '#A3CB38'  },
+          '2020-08-18': { dots: [sadColor, neutralColor], selected: true, selectedColor: '#A3CB38' },
+          '2020-08-22': { dots: [angryColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' },
+          // a date can have all mood balls, but only once of each category (sad, happy, ...) 
+          '2020-08-27': { dots: [angryColor, sadColor, happyColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' },
+          '2020-08-28': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' },
+          '2020-09-01': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' }
         }}
         markingType={'multi-dot'}
       />
