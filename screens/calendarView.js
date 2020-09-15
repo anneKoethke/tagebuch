@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Modal } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { globalStyles, localeDe, angryColor, sadColor, neutralColor, happyColor, overjoyedColor } from '../styles/global';
+import { globalStyles, localeDe, androidGreen, angryColor, sadColor, neutralColor, happyColor, overjoyedColor } from '../styles/global';
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import { LocaleConfig } from 'react-native-calendars';
 import CalendarInfo from './infoscreens/calendarInfo';
@@ -14,7 +14,7 @@ export default function CalendarView() {
 
   // info in Modal
   const [modalOpen, setModalOpen] = useState(false);
-  
+
   // TODO: for the Dates with moods/entries 
   const [markedDates, setMarkedDates] = useState([
 
@@ -24,7 +24,7 @@ export default function CalendarView() {
     <View style={globalStyles.container}>
 
       <Calendar 
-        style={{ marginTop: 10 }}
+        style={ styles.calendarStyle }
         theme={{
           calendarBackground: '#fff',
           textSectionTitleColor: '#b6c1cd', // mo di mi ...
@@ -32,11 +32,10 @@ export default function CalendarView() {
           selectedDayBackgroundColor: '#00adf5',
           selectedDayTextColor: '#ffffff',
           // change today
-          todayTextColor: '#A3CB38', // android green 
+          todayTextColor: androidGreen, // android green 
           todayBackgroundColor: '#E8E8E8', // lightest white
-
           dayTextColor: '#2d4150',
-          arrowColor: '#A3CB38',
+          arrowColor: androidGreen,
           disabledArrowColor: '#d9e1e8',
           monthTextColor: '#000',
           textDayFontFamily: 'kalam-light',
@@ -67,13 +66,13 @@ export default function CalendarView() {
         // selected must be true, to show selectedColor = color around the number
         // TODO: combine the entries' dates and moods to this markedDates object
         markedDates={{
-          '2020-08-13': { dots: [happyColor], selected: true, selectedColor: '#A3CB38'  },
-          '2020-08-18': { dots: [sadColor, neutralColor], selected: true, selectedColor: '#A3CB38' },
-          '2020-08-22': { dots: [angryColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' },
+          '2020-08-13': { dots: [happyColor], selected: true, selectedColor: androidGreen  },
+          '2020-08-18': { dots: [sadColor, neutralColor], selected: true, selectedColor: androidGreen },
+          '2020-08-22': { dots: [angryColor, overjoyedColor], selected: true, selectedColor: androidGreen },
           // a date can have all mood balls, but only once of each category (sad, happy, ...) 
-          '2020-08-27': { dots: [angryColor, sadColor, happyColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' },
-          '2020-08-28': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' },
-          '2020-09-01': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: '#A3CB38' }
+          '2020-08-27': { dots: [angryColor, sadColor, happyColor, overjoyedColor], selected: true, selectedColor: androidGreen },
+          '2020-08-28': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: androidGreen },
+          '2020-09-01': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: androidGreen }
         }}
         markingType={'multi-dot'}
       />
@@ -119,5 +118,8 @@ const styles = StyleSheet.create({
   modalClose: {
     marginTop: 20,
     marginBottom: 0
+  },
+  calendarStyle: {
+    marginTop: 10
   }
 });

@@ -64,3 +64,6 @@ export const sadColor = { key:'sad', color: '#0652DD' }; // blue
 export const neutralColor = { key:'neutral', color: 'gray' }; // gray 
 export const happyColor = { key:'happy', color: '#FFC312' }; // yellow
 export const overjoyedColor = { key:'overjoyed', color: '#FDA7DF' }; // orange 
+
+// color code for marked dates in calendarView
+export const androidGreen = '#A3CB38';
