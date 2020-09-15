@@ -6,8 +6,10 @@ It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series
 
 
 ## getting started
-`npm i`
-`expo start`
+
+`npm i
+
+expo start`
 
 
 ## How it looks
