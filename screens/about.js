@@ -13,7 +13,7 @@ export default function About() {
       <Text style={globalStyles.titleText}>About this App</Text>
       <Text style={[globalStyles.first, globalStyles.paragraph]}>Hello and Welcome, friends!</Text>
       <Text style={globalStyles.paragraph}>
-        This is my version of the CodeNinja's React Native Tutorial 
+        This is my version of the TheNetNinja's React Native Tutorial 
         <Text style={[styles.link, globalStyles.paragraph]} onPress={handlePress}> on YouTube </Text>
         with some changes (due to RN developement) and some addOns (because I want to do more stuff here, e.g. unique item.key via timestamp).
       </Text>
