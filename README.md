@@ -1,4 +1,4 @@
-# TagebuchApp with ReactNative + Expo
+# TagebuchApp with ReactNative + Expo CLI
 
 A simple diary app (prototype) with react native and expo CLI to track your mood. it's filled with dummy data and will become a pure React Native (without Expo) some time soon..
 
@@ -6,8 +6,8 @@ It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series
 
 
 ## getting started
-`npm i
-expo start`
+`npm i`
+`expo start`
 
 
 ## How it looks
