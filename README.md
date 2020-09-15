@@ -13,9 +13,9 @@ some text
 
 | HomeScreen: | Modal is empty | Modal: required inputs | Modal filled in | updated Flatlist in HomeScreen |
 |:------------|:---------------|:-----------------------|:----------------|:-------------------------------|
-| <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png" width="216"> FlatList with some dummy data | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png" width="216"> the empty Modal | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png" width="216"> using yup and formik | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png" width="216"> todo: better highlight of mood selection | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png" width="216"> entry added |
+| <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png" width="108"> FlatList with some dummy data | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png" width="108"> the empty Modal | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png" width="108"> using yup and formik | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png" width="108"> todo: better highlight of mood selection | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png" width="108"> entry added |
 
-...sime more text...
+...some more text...
 
 ### Drawer Navigation and the other screens
 
