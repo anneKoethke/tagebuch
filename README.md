@@ -7,9 +7,9 @@ It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series
 
 ## getting started
 
-`npm i
+`npm i`
 
-expo start`
+`expo start`
 
 
 ## How it looks
