@@ -9,9 +9,9 @@ npm i
 
 ### HomeScreen and how to add a new entry (Modal in HomeScreen)
 
-| HomeScreen: | Modal empty | required inputs | filled in | updated Flatlist in HomeScreen |
+| HomeScreen: | Modal is empty | Modal: required inputs | Modal filled in | updated Flatlist in HomeScreen |
 |:------------------|:--------------------|:--------------------|:--------------------|:--------------------|
-| ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png "HomeScreen"){:height="10%" width="10%"} | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png "Modal - new Entry (empty)"){:height="10%" width="10%"} | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png "Modal - new Entry (required inputs and warning)"){:height="10%" width="10%"} | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png "Modal - new Entry (with data)"){:height="10%" width="10%"} |  ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png "updated HomeScreen"){:height="10%" width="10%"} |
+| ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png "HomeScreen") some Text | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png "Modal - new Entry (empty)") some Text | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png "Modal - new Entry (required inputs and warning)") some Text | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png "Modal - new Entry (with data)") some Text | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png "updated HomeScreen") some Text |
 
 ### Drawer Navigation and the other screens
 
