@@ -7,10 +7,17 @@ npm i
 
 ## how it looks
 
-| Bla | Blupp |
-|:------------------|:--------------------|
-| ![alt text](https://github.com/anneKoethke/tagebuch/tree/master/assets/examplePics/01-HomeScreen.png "HomeScreen") | ![alt text](https://github.com/anneKoethke/tagebuch/tree/master/assets/examplePics/02-ModalEntryFrom_empty.png "empty EntryFrom") |
-| ![alt text](https://github.com/anneKoethke/radtour/blob/master/res/img/showcase_pngs/radtour_3_desktop_tooltip.png "desktop with tooltip") |  |
+### the Screens
+
+| HomeScreen | Calendar | AboutScreen |
+|:------------------|:--------------------|:--------------------|
+| ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png "HomeScreen") | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/08-CalendarView.png "CalendarView") | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/07-AboutScreen.png "AboutScreen") |
+
+### add new entry (in Modal in HomeScreen)
+
+| Modal empty | required inputs | filled in |
+|:------------------|:--------------------|:--------------------|
+| ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png "Modal - new Entry (empty)") | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png "Modal - new Entry (required inputs and warning)") | ![alt text](https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png "Modal - new Entry (with data)") |
 
 some more explaining to do...
 https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png
