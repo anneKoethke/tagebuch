@@ -6,6 +6,7 @@ npm i
 .... (toDo)
 
 ## How it looks
+<img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png" width="108">
 
 ### HomeScreen and how to add a new entry (Modal in HomeScreen)
 
