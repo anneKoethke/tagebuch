@@ -15,10 +15,18 @@ export default function CalendarView() {
   // info in Modal
   const [modalOpen, setModalOpen] = useState(false);
 
+  // TODO: get Dates from HomeScreen (Prop)
+  // TODO: change Timestamp to Date / build dates/moods object
   // TODO: for the Dates with moods/entries 
-  const [markedDates, setMarkedDates] = useState([
-
-  ]);
+  const [dates, setDates] = useState({
+    '2020-08-13': { dots: [happyColor], selected: true, selectedColor: androidGreen  },
+    '2020-08-18': { dots: [sadColor, neutralColor], selected: true, selectedColor: androidGreen },
+    '2020-08-22': { dots: [angryColor, overjoyedColor], selected: true, selectedColor: androidGreen },
+    // a date can have all mood balls, but only once of each category (sad, happy, ...) 
+    '2020-08-27': { dots: [angryColor, sadColor, happyColor, overjoyedColor], selected: true, selectedColor: androidGreen },
+    '2020-08-28': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: androidGreen },
+    '2020-09-01': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: androidGreen }
+  });
 
   return(
     <View style={globalStyles.container}>
@@ -65,15 +73,7 @@ export default function CalendarView() {
         enableSwipeMonths={true}
         // selected must be true, to show selectedColor = color around the number
         // TODO: combine the entries' dates and moods to this markedDates object
-        markedDates={{
-          '2020-08-13': { dots: [happyColor], selected: true, selectedColor: androidGreen  },
-          '2020-08-18': { dots: [sadColor, neutralColor], selected: true, selectedColor: androidGreen },
-          '2020-08-22': { dots: [angryColor, overjoyedColor], selected: true, selectedColor: androidGreen },
-          // a date can have all mood balls, but only once of each category (sad, happy, ...) 
-          '2020-08-27': { dots: [angryColor, sadColor, happyColor, overjoyedColor], selected: true, selectedColor: androidGreen },
-          '2020-08-28': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: androidGreen },
-          '2020-09-01': { dots: [happyColor, overjoyedColor], selected: true, selectedColor: androidGreen }
-        }}
+        markedDates={dates}
         markingType={'multi-dot'}
       />
       <Text style={[globalStyles.first, globalStyles.paragraph]}>See your mood swings on a monthly basis. For more informaton, click the info button:</Text>
