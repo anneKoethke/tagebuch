@@ -28,7 +28,7 @@ const HomeStack = () => (
       <Screen 
         name="EntryDetails" 
         component={EntryDetails} 
-        options={{ title: 'Entry Details', headerTintColor: '#fff', }} 
+        options={{ title: 'Entry Details', headerTintColor: '#fff' }} 
       /> 
     </Navigator>
 );

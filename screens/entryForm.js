@@ -38,6 +38,7 @@ export default function EntryForm({ addEntry }) {
         onSubmit={(values, actions) => {
           actions.resetForm();
           addEntry(values);
+          console.log('logging in entryForm')
           console.log(values);
         }}
       >

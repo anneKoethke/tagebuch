@@ -7,7 +7,7 @@ import moment from 'moment';
 
 export default function EntryDetails({ route, navigation }) {
   
-  const { title, mood, content, key } = route.params;
+  const { title, mood, content, date, key } = route.params;
 
   return(
     <View style={globalStyles.container}>

@@ -6,7 +6,7 @@ import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import { LocaleConfig } from 'react-native-calendars';
 import CalendarInfo from './infoscreens/calendarInfo';
 
-export default function CalendarView() {
+export default function CalendarView({ navigation }) {
 
   // change the names for moths and days to German
   LocaleConfig.locales['de'] = localeDe;
@@ -64,7 +64,10 @@ export default function CalendarView() {
         }}
         current={ new Date() } // set specific {'2020-09-02'} or {'yyyy-mm-dd'}
         maxDate={ new Date() }
-        onDayPress={(day) => {console.log('selected day', day)}}
+        onDayPress={
+          (day) => {console.log('selected day', day)}
+          // (dayOrItem) => navigation.navigate('EntryDetails', dayOrItem)
+        }
         // Handler which gets executed when visible month changes in calendar. Default = undefined
         onMonthChange={(month) => {console.log('month changed', month)}}
         hideExtraDays//={true}
@@ -90,7 +93,7 @@ export default function CalendarView() {
         </View>
       </Modal>
 
-       <MaterialCommunityIcons 
+      <MaterialCommunityIcons 
         name="information-outline" 
         size={24} 
         style={styles.modalToggle}
