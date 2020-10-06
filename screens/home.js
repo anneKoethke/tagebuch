@@ -19,14 +19,8 @@ export default function Home({ navigation }) {
 
   const addEntry = (entry) => {
     let now = moment().unix();
-    entry.key = now.toString();
-    entry.date = moment.unix(now).format("YYYY-MM-DD");
-    console.log(moment());            // "2020-09-29T09:30:26.859Z"
-    console.log(moment().toString()); // Tue Sep 29 2020 11:30:26 GMT+0200
-    console.log(moment.unix(now).format("L")) // 09/29/2020
-    console.log(moment.unix(now).format("YYYY-MM-DD"));
-    //console.log(moment().unix(parseInt(entry.key)).format("MM/DD/YYYY"));
-    // entry.date = () // moment.unix(value).format("MM/DD/YYYY");
+    entry.key = now.toString(); // timestamp as a String like "1601372375"
+    entry.date = moment.unix(now).format("YYYY-MM-DD"); // string like "2020-09-12"
     setEntries((currEntries) => {
       return [ entry, ...currEntries]
     });
