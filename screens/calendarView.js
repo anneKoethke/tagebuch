@@ -5,6 +5,7 @@ import { globalStyles, localeDe, androidGreen, angryColor, sadColor, neutralColo
 import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 import { LocaleConfig } from 'react-native-calendars';
 import CalendarInfo from './infoscreens/calendarInfo';
+import { data } from '../shared/data';
 
 export default function CalendarView({ navigation }) {
 
@@ -15,8 +16,18 @@ export default function CalendarView({ navigation }) {
   // info in Modal
   const [modalOpen, setModalOpen] = useState(false);
 
+  /* BUILD A DATES ARRAY that can be used by calendar: date with more than one mood,   */
+  // 
+
+  const moodList= [
+    {name: 'angry',     key: '1'},
+    {name: 'sad',       key: '2'},
+    {name: 'neutral',   key: '3'},
+    {name: 'happy',     key: '4'},
+    {name: 'overjoyed', key: '5'}
+  ];
+
   // TODO: get Dates from HomeScreen (Prop)
-  // TODO: change Timestamp to Date / build dates/moods object
   // TODO: for the Dates with moods/entries 
   const [dates, setDates] = useState({
     '2020-08-13': { dots: [happyColor], selected: true, selectedColor: androidGreen  },
@@ -75,7 +86,6 @@ export default function CalendarView({ navigation }) {
         showWeekNumbers
         enableSwipeMonths={true}
         // selected must be true, to show selectedColor = color around the number
-        // TODO: combine the entries' dates and moods to this markedDates object
         markedDates={dates}
         markingType={'multi-dot'}
       />
