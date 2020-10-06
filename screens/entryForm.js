@@ -74,7 +74,11 @@ export default function EntryForm({ addEntry }) {
               <View style={styles.moodView}>
                 <TouchableOpacity 
                   style={[ styles.imageStyle ]}
-                  onPress={() => { props.values.mood=currentMood[0].key; props.handleChange('mood'); setShowMood(currentMood[0].name) }}>
+                  onPress={() => { 
+                    props.values.mood=currentMood[0].key; 
+                    props.handleChange('mood'); 
+                    setShowMood(currentMood[0].name) 
+                  }}>
                   <Image source={images.moods[1]} />
                 </TouchableOpacity>
                 <Text style={globalStyles.paragraph}>{currentMood[0].name}</Text>
