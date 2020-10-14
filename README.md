@@ -18,8 +18,8 @@ It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series
 
 | HomeScreen: | Modal is empty | Modal: required inputs | Modal filled in | updated Flatlist in HomeScreen |
 |:------------|:---------------|:-----------------------|:----------------|:-------------------------------|
-| 
-<img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png" height="300"> "HomeScreen with Flatlist" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png" height="300">  "Modal = EntryForm" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png" height="300"> "required" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png" height="300"> "dummy data inserted" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png" height="300"> |  |
+| HomeScreen with Flatlist | Modal = EntryForm | required | dummy data inserted ||
+| <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png" height="300"> |  |
 
 The HomeScreen currently shows all the existing entries. This will change to showing only the most recent entries, e.g. of the current week or month, in the future.. (though, showing everything with dynamic reloading is what Flatlist is about, but my UI feeling said no to this solution)
 
