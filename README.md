@@ -18,8 +18,8 @@ It was an enhancement of a very useful tutorial by TheNetNinja: [tutorial series
 
 | HomeScreen: | Modal is empty | Modal: required inputs | Modal filled in | updated Flatlist in HomeScreen |
 |:------------|:---------------|:-----------------------|:----------------|:-------------------------------|
-| HomeScreen with Flatlist | Modal = EntryForm | required | dummy data inserted ||
 | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/01-HomeScreen.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/02-ModalEntryFrom_empty.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/03-ModalEntryForm_required.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/04-ModalEntryForm_with_data.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/05-updated_HomeScreen.png" height="300"> |  |
+| HomeScreen with Flatlist | Modal = EntryForm | required | dummy data inserted ||
 
 The HomeScreen currently shows all the existing entries. This will change to showing only the most recent entries, e.g. of the current week or month, in the future.. (though, showing everything with dynamic reloading is what Flatlist is about, but my UI feeling said no to this solution)
 
@@ -30,7 +30,8 @@ Clicking on the edit 'button' (MaterialCommunityIcon) opens up a Modal to fill i
 
 | Drawer Navigation | AboutScreen | CalendarView (current month) | Calender (last month)  | Info on CalendarView (Modal) | HomeScreen: EntryDetails |
 |:------------------|:------------|:-----------------------------|:-----------------------|:-----------------------------|:-------------------------|
-| <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/06-DrawerNavigation.png" height="300"> "DrawerNavigation" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/07-AboutScreen.png" height="300"> "AboutScreen" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/08-CalendarView.png" height="300"> "CalendarView - current month" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/09-CalendarView_last_month.png" height="300"> "last month" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/10-ModalCalendarInfo.png" height="300"> "Info on CalendarView (Modal)" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/09-CalendarView_last_month.png" height="300">  "last month" | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/11-EntryDetails.png" height="300">  "EntryDetails" |
+| <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/06-DrawerNavigation.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/07-AboutScreen.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/08-CalendarView.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/09-CalendarView_last_month.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/10-ModalCalendarInfo.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/09-CalendarView_last_month.png" height="300"> | <img src="https://github.com/anneKoethke/tagebuch/blob/master/assets/examplePics/11-EntryDetails.png" height="300"> |
+| DrawerNavigation | AboutScreen | CalendarView - current month | last month | Info on CalendarView (Modal) | EntryDetails |
 
 The Routing via AppNavigator has a DrawerNavigation (HomeStack, AboutStack, CalendarStack) with a nested StackNavigation (HomeScreen, EntryDetails).
 
